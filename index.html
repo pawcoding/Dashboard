@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+     <head>
+          <meta charset="utf-8">
+          <title>Dashboard | Your Personal Startpage</title>
+          <link rel="stylesheet" href="css/style.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+     </head>
+     <body>
+          <article class="clock">
+               <!--Clock Module-->
+               <h2 id="time">Time</h2>
+               <h3 id="date">Date</h3>
+
+               <script src="js/time.js" charset="utf-8"></script>
+          </article>
+
+          <article class="search">
+               <!--Google Search Module-->
+               <form class="searchform" action="https://www.google.com/search" method="get" target="_blank">
+                    <input type="text" placeholder="Google Search" name="q" id="search" autofocus="" autocomplete="on">
+               </form>
+          </article>
+
+          <article class="links">
+               <!--Website Links Module-->
+          </article>
+
+          <article class="calendar">
+               <!--Calendar Module-->
+               <div class="calendarcontainer">
+                    <div class="days">
+                         <span>Monday</span>
+                         <span>Tuesday</span>
+                         <span>Wednesday</span>
+                         <span>Thursday</span>
+                         <span>Friday</span>
+                         <span>Saturday</span>
+                         <span>Sunday</span>
+                    </div>
+               </div>
+
+               <script src="js/calendar.js" charset="utf-8"></script>
+          </article>
+     </body>
+</html>

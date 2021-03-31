@@ -1,0 +1,10 @@
+.calendarcontainer {
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+}
+
+.days {
+     grid-area: 1 / 1 / 1 span / 7 span;
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+}
