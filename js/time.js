@@ -6,17 +6,14 @@ $(function(){
 
 function setDateTime(){
      //Get current time and date
-     let now = new Date().toISOString().split('T');
+     let now = new Date();
 
      //Transform to time-string
-     let time = now[1].substring(0, 8);
-     if (time.startsWith('0')) {
-          time = time.substr(1);
-     }
+     let time = now.getHours() + ':' + addZero(now.getMinutes()) + ':' + addZero(now.getSeconds());
 
      //Transform to date-string
-     let datecomponents = now[0].split('-');
-     let date = datecomponents[2] + '.' + datecomponents[1] + '.' + datecomponents[0];
+     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+     let date = days[now.getDay()] + ', ' + now.getDate() + '.' + now.getMonth() + '.' + now.getFullYear();
 
      //Set the information in the containers with jQuery
      $('#time').text(time);
@@ -24,4 +21,9 @@ function setDateTime(){
 
      //Refresh the time every 0.2 seconds
      setTimeout(setDateTime, 200);
+}
+
+//Add a zero if number is lower than 10
+function addZero(number){
+     return (number < 10) ? "0" + number : number;
 }
