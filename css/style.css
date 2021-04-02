@@ -30,14 +30,14 @@ article {
 h1 {
      margin: 2px 0;
 
-     font-size: 2.5rem;
+     font-size: 2em;
      text-shadow: 2px 2px 5px var(--color-shadow);
 }
 
 h2 {
      margin: 2px 0;
 
-     font-size: 2rem;
+     font-size: 1.75em;
      text-shadow: 2px 2px 4px var(--color-shadow);
 }
 
@@ -47,13 +47,19 @@ a {
 }
 
 footer {
+     background-color: #313131;
+
      position: fixed;
      text-align: right;
      padding: 10px;
      bottom: 0;
      right: 0;
+     border-top: 2px solid var(--color-shadow);
+     border-left: 2px solid var(--color-shadow);
+     border-radius: var(--border-radius) 0 0;
 
-     font-size: 0.9rem;
+     font-size: 0.9em;
+     transition: var(--transition);
 }
 
 
@@ -72,13 +78,14 @@ footer {
      background-color: var(--color-background);
      color: var(--color-text);
 
-     width: 50%;
+     width: 60%;
+     max-width: 700px;
      padding: 10px;
      border: 2px solid var(--color-shadow);
      border-radius: var(--border-radius);
 
      text-align: center;
-     font-size: 1.2rem;
+     font-size: 1.1em;
 
      transition: var(--transition);
 }
@@ -97,10 +104,9 @@ footer {
 .weblinks {
      background-color: #FFF1;
 
+     max-width: 80%;
      width: fit-content;
      margin: auto;
-     padding: 10px 0;
-     height: 50px;
      border: 2px solid var(--color-shadow);
      border-radius: var(--border-radius);
 }
@@ -108,11 +114,11 @@ footer {
 .links a {
      display: inline-block;
      height: 50px;
+     margin: 15px;
 }
 
 .links img {
-     height: 50px;
-     margin: 0 15px;
+     height: 100%;
 }
 
 
@@ -134,7 +140,7 @@ footer {
      grid-gap: 5px;
 }
 
-.days.small {
+.days.small, .days.tiny {
      display: none;
 }
 
@@ -154,11 +160,32 @@ footer {
 
 
 
+/*Big Displays Layout*/
+@media only screen and (min-width:1441px) {
+     body {
+          font-size: 22px;
+     }
+}
+
+
+
 /*Tablet Layout*/
 @media only screen and (max-width:1000px) {
-     #search {
-          width: 80%;
+     body {
+          font-size: 18px;
      }
+
+
+     #search {
+          width: 70%;
+     }
+
+
+     .links a {
+          height: 40px;
+          margin: 10px;
+     }
+
 
      .days.small {
           display: grid;
@@ -172,5 +199,37 @@ footer {
 
 /*Smartphone Layout*/
 @media only screen and (max-width:550px) {
+     body {
+          font-size: 16px;
+     }
 
+     footer {
+          width: 100%;
+
+          font-size: 0.8em;
+     }
+
+
+     #search {
+          width: 80%;
+     }
+
+
+     .calendarcontainer {
+          margin: 0 5px;
+          width: 100%;
+     }
+
+     .days.big, .days.small {
+          display: none;
+     }
+     .days.tiny {
+          display: grid;
+     }
+
+     .calendar span {
+          box-sizing: border-box;
+          padding: 10px;
+          margin: 0;
+     }
 }

@@ -29,7 +29,7 @@ function fillCalendar(){
 
      //Add days to calendar
      for (let i = 1; i <= days; i++) {
-          let day = $("<span>").text(i);;
+          let day = $("<span>").text(i);
           if (i == now.getDate()) {
                day.attr('id', "today");
           }
