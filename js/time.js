@@ -13,7 +13,7 @@ function setDateTime(){
 
      //Transform to date-string
      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-     let date = days[now.getDay()] + ', ' + now.getDate() + '.' + now.getMonth() + '.' + now.getFullYear();
+     let date = days[now.getDay()] + ', ' + now.getDate() + '.' + (now.getMonth()+1) + '.' + now.getFullYear();
 
      //Set the information in the containers with jQuery
      $('#time').text(time);
