@@ -1,0 +1,96 @@
+/*General Design*/
+:root {
+     --color-background: #222;
+     --color-background-light: #333;
+     --color-text: #eee;
+     --color-shadow: #111;
+     --color-border: #111;
+
+     --border: 2px solid var(--color-border);
+     --border-radius: 5px;
+}
+
+body {
+     background-color: var(--color-background);
+     color: var(--color-text);
+     font-family: 'Roboto', sans-serif;
+     font-size: 20px;
+}
+
+h1 {
+     font-size: 2em;
+     text-shadow: 2px 2px 5px var(--color-shadow);
+}
+
+h2 {
+     font-size: 1.75em;
+     text-shadow: 2px 2px 4px var(--color-shadow);
+}
+
+a {
+     color: inherit;
+     text-decoration: none;
+}
+
+footer {
+     background-color: var(--color-background-light);
+     border-top: var(--border);
+     border-left: var(--border);
+     border-radius: var(--border-radius) 0 0;
+     font-size: 0.8em;
+}
+
+/*Google Search Module*/
+#query {
+     background-color: var(--color-background);
+     color: var(--color-text);
+     border: var(--border);
+     border-radius: var(--border-radius);
+     font-size: 1.1em;
+}
+
+#query:focus {
+     background-color: var(--color-background-light);
+     outline: none;
+}
+
+/*Bookmark Module*/
+.links {
+     background-color: var(--color-background-light);
+     border: var(--border);
+     border-radius: var(--border-radius);
+}
+
+/*Calendar Module*/
+.calendar {
+     text-shadow: 1px 1px 3px var(--color-shadow);
+}
+
+#today {
+     background-color: var(--color-background-light);
+     border: var(--border);
+     border-radius: var(--border-radius);
+     font-weight: bold;
+}
+
+
+/*Big Display Design*/
+@media only screen and (min-width:1441px) {
+     body {
+          font-size: 22px;
+     }
+}
+
+/*Tablet Design*/
+@media only screen and (max-width:1000px) {
+     body {
+          font-size: 18px;
+     }
+}
+
+/*Smartphone Design*/
+@media only screen and (max-width:550px) {
+     body {
+          font-size: 16px;
+     }
+}

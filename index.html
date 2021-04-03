@@ -4,14 +4,15 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Dashboard | Your Personal Startpage</title>
-          <link rel="stylesheet" href="css/style.css">
+          <link rel="stylesheet" href="css/Layout.css">
+          <link rel="stylesheet" href="css/Design.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
           <link rel="preconnect" href="https://fonts.gstatic.com">
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
      </head>
      <body>
           <main>
-               <article class="clock">
+               <article class="module" id="clock">
                     <!--Clock Module-->
                     <h1 id="time">Time</h1>
                     <h2 id="date">Date</h2>
@@ -19,24 +20,16 @@
                     <script src="js/time.js" charset="utf-8"></script>
                </article>
 
-               <article class="search">
+               <article class="module" id="search">
                     <!--Google Search Module-->
                     <form class="searchform" action="https://www.google.com/search" method="get" target="_blank">
-                         <input type="text" placeholder="Google Search" name="q" id="search" autofocus="" autocomplete="on">
+                         <input type="text" placeholder="Google Search" name="q" id="query" autofocus="" autocomplete="on">
                     </form>
-
-                    <script type="text/javascript">
-                         $('#searchform').submit(function(e) {
-                              setTimeout(function(){
-                                   $('#search').val('');
-                              }, 200);
-                         });
-                    </script>
                </article>
 
-               <article class="links">
-                    <!--Website Links Module-->
-                    <div class="weblinks">
+               <article class="module" id="bookmarks">
+                    <!--Bookmark Module-->
+                    <div class="links">
                          <a href="https://pawcode.de" target="_blank" title="pawcode.de"><img src="icons/pawcode.png" alt="Pawcode"></a>
                          <a href="https://randomsaber.pawcode.de/" target="_blank" title="RandomSaber"><img src="icons/randomsaber.png" alt="RandomSaber"></a>
                          <a href="https://vokabeln.pawcode.de/" target="_blank" title="Vokabeleditor"><img src="icons/vocabulary.png" alt="Vokabeleditor"></a>
@@ -46,10 +39,10 @@
                     </div>
                </article>
 
-               <article class="calendar">
+               <article class="module" id="calendar">
                     <!--Calendar Module-->
-                    <div class="calendarcontainer">
-                         <div class="days big">
+                    <div class="calendar">
+                         <div class="days" id="big">
                               <span>Monday</span>
                               <span>Tuesday</span>
                               <span>Wednesday</span>
@@ -58,7 +51,7 @@
                               <span>Saturday</span>
                               <span>Sunday</span>
                          </div>
-                         <div class="days small">
+                         <div class="days" id="small">
                               <span>Mon</span>
                               <span>Tue</span>
                               <span>Wed</span>
@@ -67,7 +60,7 @@
                               <span>Sat</span>
                               <span>Sun</span>
                          </div>
-                         <div class="days tiny">
+                         <div class="days" id="tiny">
                               <span>M</span>
                               <span>T</span>
                               <span>W</span>

@@ -1,0 +1,131 @@
+/*General Layout*/
+:root {
+     --transition: all 0.3 ease;
+}
+
+body {
+     margin: 0;
+     text-align: center;
+}
+
+h1, h2 {
+     margin: 2px 0;
+}
+
+footer {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     padding: 10px;
+     text-align: right;
+     transition: var(--transition);
+}
+
+.module {
+     margin: 20px auto;
+}
+
+/*Google Search Module*/
+#query {
+     width: 60%;
+     max-width: 700px;
+     padding: 10px;
+     text-align: center;
+     transition: var(--transition);
+}
+
+/*Bookmark Module*/
+.links {
+     width: fit-content;
+     max-width: 80%;
+     margin: auto;
+}
+
+.links a {
+     display: inline-block;
+     height: 50px;
+     margin: 15px;
+}
+
+.links img {
+     height: 100%;
+}
+
+/*Calendar Module*/
+.calendar {
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     grid-gap: 5px;
+     width: 90%;
+     max-width: 1000px;
+     margin: 0 auto;
+}
+
+.days {
+     grid-area: 1 / 1 / 1 / 8;
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     grid-gap: 5px;
+}
+#small, #tiny {
+     display: none;
+}
+
+.calendar span {
+     box-sizing: border-box;
+     margin: 0 10px;
+     padding: 10px 0;
+}
+
+
+/*Big Display Layout*/
+@media only screen and (min-width:1441px) {
+
+}
+
+/*Tablet Layout*/
+@media only screen and (max-width:1000px) {
+     #query {
+          width: 70%;
+     }
+
+     .links a {
+          height: 40px;
+          margin: 10px;
+     }
+
+     #small {
+          display: grid;
+     }
+     #big {
+          display: none;
+     }
+}
+
+/*Smartphone Layout*/
+@media only screen and (max-width:550px) {
+     footer {
+          width: 100%;
+     }
+
+     #query {
+          width: 80%;
+     }
+
+     .calendar {
+          width: 100%;
+          margin: 0 5px;
+     }
+
+     #tiny {
+          display: grid;
+     }
+     #small {
+          display: none;
+     }
+
+     .calendar span {
+          margin: 0;
+          padding: 10px;
+     }
+}

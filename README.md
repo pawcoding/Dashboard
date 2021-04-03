@@ -1,7 +1,7 @@
 # Dashboard | Your Personal Startpage
 ## General
-This Dashboard is a personal start page for the browser.
-It's divided into different modules so that even beginners can easily get started with web programming. Just download the code and open the `index.html` file with your browser.
+This Dashboard is a personal start page for your browser.
+It's divided into different modules. Here even beginners can easily get started with web programming. Just download the code and open the file `index.html` with your browser.
 
 > ![Screenshot](screenshot.png)
 > Screenshot
@@ -12,16 +12,18 @@ It's divided into different modules so that even beginners can easily get starte
   * Time
   * Date
 * Google Search
-* Bookmarks list
+* Bookmarks
 * Calendar
+
+Feel free to create your own modules and adding them to your personal dashboard.
 
 
 ## How to personalize
 ### Changing the order
-Every module has it's own `<article>`-tag. You can easily swap the order of the modules by changing the order in the source code of the `index.html` file.
+Every module has it's own `<article>`-tag. You can easily swap the order of the modules by changing the order in the source code of the file `index.html`.
 
 ### Adding own bookmarks
-In the module **Links** you can find the block `<div class=weblinks>`. The block contains all the bookmarks. Every bookmark is built by the following structure:
+In the module **Bookmarks** you can find the tag `<div class=links>`. This block contains all of your bookmarks. Every bookmark has the following structure:
 ```html
 <a href="https://pawcode.de" target="_blank" title="pawcode.de">
  <img src="icons/pawcode.png" alt="Pawcode">
@@ -34,16 +36,16 @@ Element | Function
 `target="_blank"` | Ensures that the page opens in a new browser tab
 `title="..."` | Displays a text when the mouse hovers over the icon
 `<img>` | **Image tag** (Icon)
-`src="..."` | Path to the icon _(can be local or weblink)_
+`src="..."` | Path to the icon _(can be local in folder_ `icons` _or weblink)_
 `alt` | Displays a text when the icon file was not found
 
 ### Changing the theme
-The style of the dashboard is divided into two different files in the `css` folder:
+The style of the dashboard is divided into two different files in the folder `css`:
 * `Layout.css`
 * `Design.css`
 
 You only have to worry about the design as the layout generally stays the same.
-The first element in the design file is called `:root`. Here you can find all the colors and other useful values.
+The first element of the design file is called `:root`. Here are all the colors and other useful values.
 ```css
 :root {
   --color-background: #222;
@@ -54,5 +56,5 @@ The first element in the design file is called `:root`. Here you can find all th
 }
 ```
 #### Example
-You want to change the color of the background to a light grey.
+You want to change the color of the background to light grey.
 Just set the value of `--color-background` to `#bbb` and you are good to go.

@@ -6,7 +6,7 @@ $(function(){
 
 function fillCalendar(){
      //Clear the current calendar (when loaded more than one day)
-     $('.calendarcontainer').children().not('.days').remove();
+     $('.calendar').children().not('.days').remove();
 
      //Get current date
      const now = new Date();
@@ -20,7 +20,7 @@ function fillCalendar(){
      //Add spaces for first weekday
      for (let i = 1; i < weekday; i++) {
           let empty = $("<span>");
-          $('.calendarcontainer').append(empty);
+          $('.calendar').append(empty);
      }
 
 
@@ -33,7 +33,7 @@ function fillCalendar(){
           if (i == now.getDate()) {
                day.attr('id', "today");
           }
-          $('.calendarcontainer').append(day);
+          $('.calendar').append(day);
      }
 
      //Refresh the calendar when day ends
