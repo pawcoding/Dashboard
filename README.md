@@ -6,6 +6,8 @@ It's divided into different modules. Here even beginners can easily get started 
 > ![Screenshot](screenshot.png)
 > Screenshot
 
+There's also a german tutorial on my website [pawcode.de](https://pawcode.de/projekte/Projekt.php?id=dashboard)
+
 
 ## Modules
 * Clock
@@ -37,7 +39,7 @@ Element | Function
 `title="..."` | Displays a text when the mouse hovers over the icon
 `<img>` | **Image tag** (Icon)
 `src="..."` | Path to the icon _(can be local in folder_ `icons` _or weblink)_
-`alt` | Displays a text when the icon file was not found
+`alt="..."` | Displays a text when the icon file was not found
 
 ### Changing the theme
 The style of the dashboard is divided into two different files in the folder `css`:
